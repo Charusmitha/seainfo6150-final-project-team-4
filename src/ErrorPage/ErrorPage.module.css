@@ -1,0 +1,13 @@
+.error{
+	margin-top: 135px;
+	height: 490px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.errorDesc{
+	color: red;
+	font-size: 30px;
+}
