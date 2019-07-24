@@ -1,34 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from './DegreesSorterFilterer.module.css';
 
 const DegreesSorterFilterer = ({ onSort, onFilter, schools }) => {
   return (
-    <div>
-      Degrees Sorter
-      <section>
-        <header>Sort by:</header>
+    <div className={styles.sortAndFilter}>
+      <section className={styles.sort}>
         <select onChange={onSort}>
-          <option value="none">None</option>
-          <option value="AZ">A - Z</option>
-          <option value="ZA">Z - A</option>
+          <option value="none">Sort By: None</option>
+          <option value="AZ">Sort By: A - Z</option>
+          <option value="ZA">Sort By: Z - A</option>
         </select>
       </section>
-      <section>
-        <header>Filter by:</header>
-        <div>
-          <label htmlFor="level">By level</label>
+      <section className={styles.filter}>
+        <div className={styles.levelFilter}>
           <select name="level" id="level" onChange={onFilter}>
-            <option value="none">None</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-            <option value="mastery">Mastery</option>
+            <option value="none">Filter By Level</option>
+            <option value="beginner">Level: Beginner</option>
+            <option value="intermediate">Level: Intermediate</option>
+            <option value="advanced">Level: Advanced</option>
+            <option value="mastery">Level: Mastery</option>
           </select>
         </div>
-        <div>
-          <label htmlFor="school">By school</label>
+        <div className={styles.schoolFilter}>
           <select name="school" id="school" onChange={onFilter}>
-            <option value="none">None</option>
+            <option value="none">Filter By School</option>
 
             {schools.map((school, index) => (
               <option key={school.slug} value={school.slug}>

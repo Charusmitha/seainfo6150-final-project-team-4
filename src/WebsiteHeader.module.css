@@ -1,0 +1,21 @@
+
+.header{
+	background-color: #4287f5;
+	width:100%;
+    position:fixed;
+    top:0px;
+    margin: 0;
+}
+
+.title{
+	float: left;
+	font-size: 22px;
+	padding-left: 20px;
+	margin: 0;
+}
+
+.navigation{
+	float: right;
+	padding-right: 10px;
+}
+

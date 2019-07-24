@@ -19,7 +19,7 @@ class NewsletterForm extends Component {
       <div>Thank you!</div>
     ) : (
       <form onSubmit={this.onSubmit}>
-        <input type="text" name="email-address" />
+        Email: <input type="email" name="email-address" required/>
         <input type="submit" value="Sign up" />
       </form>
     )

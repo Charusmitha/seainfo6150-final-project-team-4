@@ -2,21 +2,28 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Degrees from "../Degrees/Degrees";
+import styles from './Schools.module.css';
 
 const Schools = ({ degrees, schools }) => {
   return (
-    <div>
+    <div className={styles.schoolList}>
       {schools.map((school, index) => {
-        // thisSchoolsDegrees is an array of all the
-        // degrees offered by the school currently being
-        // iterated over
         const thisSchoolsDegrees = degrees.filter(degree =>
           degree.schools.includes(school.slug)
         );
 
         return (
-          <div key={`${school.slug}`}>
-            Schools display attributes
+          <div className={styles.schools} key={`${school.slug}`}>
+            <h3 className={styles.schoolTitle}>{school.name}</h3>
+            <p>{school.short_summary}</p>
+            <h4>Degrees Offered:</h4>
+            {thisSchoolsDegrees.map(degree => (
+              <div className={styles.degreeList}>
+                <a href={"/degree/" + `${degree.slug}`}>{degree.title}</a>
+                <br />
+              </div>
+            ))}
+            <br />
           </div>
         );
       })}
@@ -30,3 +37,10 @@ Schools.propTypes = {
 };
 
 export default Schools;
+
+
+// thisSchoolsDegrees is an array of all the
+// degrees offered by the school currently being
+// iterated over
+//<a href="http://localhost:3000/degree/${degree.slug}" key={degree.slug}>{degree.title}</a>
+//<div className={styles.degree} key={degree.slug}>{degree.title}</div>

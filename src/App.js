@@ -15,6 +15,8 @@ import DegreesPage from "./DegreesPage/DegreesPage";
 import EnrollPage from "./EnrollPage/EnrollPage";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import HomePage from "./HomePage/HomePage";
+import WebsiteHeader from "./WebsiteHeader";
+import WebsiteFooter from "./WebsiteFooter";
 import SchoolsPage from "./SchoolsPage/SchoolsPage";
 
 // data
@@ -27,8 +29,7 @@ function App() {
     <div className="App">
       <Router>
         <header>
-          This is a page header that will persist on every page
-          <hr />
+          <WebsiteHeader />
         </header>
         <main>
           <Switch>
@@ -80,9 +81,8 @@ function App() {
             <Route component={ErrorPage} />
           </Switch>
         </main>
-        <footer>
-          <hr />
-          This is a page footer that will persist on every page
+        <footer>   
+          <WebsiteFooter />
         </footer>
       </Router>
     </div>

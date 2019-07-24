@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from './Calendar.module.css';
 
 const Calendar = ({ dates }) => {
   return (
@@ -7,7 +8,7 @@ const Calendar = ({ dates }) => {
       {dates.map((date, index) => {
         return (
           <div key={`${date.date}-${index}`}>
-            Date display information
+            <p>{date.date} --> {date.description}</p>
           </div>
         );
       })}

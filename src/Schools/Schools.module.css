@@ -1,0 +1,22 @@
+.schoolList{
+	display: grid;
+  	grid-template-columns: repeat(3, 1fr);
+  	grid-gap: 40px;
+  	padding-left: 15px;
+  	padding-right: 15px;
+  	padding-bottom: 20px;
+}
+
+.degreeList{
+	padding-right: 10px;
+}
+
+.schools{
+	border: 2px solid red;
+	height: 400px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.schoolTitle{
+}

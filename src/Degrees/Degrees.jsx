@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import styles from './Degrees.module.css';
 
 const Degrees = ({ degrees }) => {
   return (
-    <div>
+    <div className={styles.degreeList}>
       {degrees.map((degree, index) => {
         return (
           <div key={`${degree.slug}`}>
             <img src={degree.image} alt={degree.title} />
-            Degree display attributes
+            <a href={"/degree/" + `${degree.slug}`}>{degree.title}</a>
           </div>
         );
       })}

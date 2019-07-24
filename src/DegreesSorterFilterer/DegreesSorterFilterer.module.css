@@ -1,0 +1,18 @@
+.sortAndFilter{
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+.sort{
+	margin-right: 10px;
+}
+
+.filter{
+	display: flex;
+}
+
+.levelFilter{
+	margin-right: 10px;
+}

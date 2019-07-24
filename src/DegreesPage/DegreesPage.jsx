@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Degrees from "../Degrees/Degrees";
 import DegreesSorterFilterer from "../DegreesSorterFilterer/DegreesSorterFilterer";
+import styles from './DegreesPage.module.css';
 
 class DegreesPage extends Component {
   constructor(props) {
@@ -88,16 +89,14 @@ class DegreesPage extends Component {
     const displayDegrees = this.state.updatedDegrees || this.props.degrees;
 
     return (
-      <div>
-        This is the Degrees page
-
+      <div className={styles.degrees}>
+        <h2 className={styles.title}>Degrees</h2>
         <DegreesSorterFilterer
           onFilter={this.onFilter}
           onSort={this.onSort}
           schools={this.props.schools}
         />
         <section>
-          <header>Degrees</header>
           <Degrees degrees={displayDegrees} />
         </section>
       </div>

@@ -1,0 +1,11 @@
+.navigation{
+	list-style: none;
+	display: flex;
+	padding-top: 40px;
+}
+
+.navigation li{
+	padding-right: 15px;
+	font-size: 18px;
+	color: red;
+}

@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from './EnrollConfirmation.module.css';
 
 const EnrollConfirmation = ({ form }) => {
   const displayElements = [];
-  for (let i = 0; i < form.elements.length; i++) {
+  for (let i = 0; i < form.elements.length-1; i++) {
     const element = form.elements[i];
 
     displayElements.push(
@@ -13,7 +14,7 @@ const EnrollConfirmation = ({ form }) => {
     );
   }
 
-  return <div>{displayElements}</div>;
+  return <div className={styles.confirmation}><h1>Thank you</h1>{displayElements}</div>;
 };
 
 EnrollConfirmation.propTypes = {
