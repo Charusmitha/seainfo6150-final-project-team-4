@@ -8,39 +8,39 @@ const EnrollForm = ({ degrees, onSubmit, currentDegree }) => {
     <form className={styles.enrollForm} onSubmit={onSubmit}>
       <h2 className={styles.title}>Enroll</h2>
       <div>
-        <label for="fullname">Full Name</label>
+        <label for="fullname">Full Name<sup>*</sup></label>
         <input type="text" id="fullname" name="Name" required/>
       </div>
       <div>
-        <label for="emailId">Email ID</label>
+        <label for="emailId">Email ID<sup>*</sup></label>
         <input type="email" pattern=".+@+.+com" id="emailId" name="Email ID" placeholder="Please provide your email in the format foo@abc.com" required/>
       </div>
       <div>
-        <label for="address">Address</label>
+        <label for="address">Address<sup>*</sup></label>
         <input type="text" id="address" name="Address" required/>
       </div>
       <div>
-        <label for="city">City</label>
+        <label for="city">City<sup>*</sup></label>
         <input type="text" id="city" name="State" required/>
       </div>
       <div>
-        <label for="state">State</label>
+        <label for="state">State<sup>*</sup></label>
         <input type="text" id="state" name="State" required/>
       </div>
       <div>
-        <label for="zipcode">Zipcode</label>
+        <label for="zipcode">Zipcode<sup>*</sup></label>
         <input type="text" id="zipcode" name="Zipcode" pattern="[0-9]{5}" placeholder="Please provide 5 digit zipcode in the format XXXXX" required/>
       </div>
       <div>
-        <label for="phone">Phone Number</label>
+        <label for="phone">Phone Number<sup>*</sup></label>
         <input type="text" id="phone" name="Phone Number" oninvalid="this.setCustomValidity('Not Valid')" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Please provide 10 digit phone number in the format XXX-XXX-XXXX" required/>
       </div>
       <div>
-        <label for="dob">DOB</label>
+        <label for="dob">DOB<sup>*</sup></label>
         <input type="date" id="dob" name="DOB" required/>
       </div>
       <div>
-        <label for="gender">Gender</label> <select id="gender" name="Gender">
+        <label for="gender">Gender<sup>*</sup></label> <select id="gender" name="Gender">
                                               <option value="male">Male</option>
                                               <option value="female">Female</option>
                                               <option value="other">Other</option>
@@ -48,7 +48,7 @@ const EnrollForm = ({ degrees, onSubmit, currentDegree }) => {
                                             </select>
       </div>
       <div>
-        <label for="pronouns">Preferred Pronouns</label> <select id="gender" name="Gender">
+        <label for="pronouns">Preferred Pronouns<sup>*</sup></label> <select id="gender" name="Gender">
                                                           <option value="he/him">He/Him</option>
                                                           <option value="she/her">She/Her</option>
                                                           <option value="they/them">They/Them</option>
@@ -57,7 +57,7 @@ const EnrollForm = ({ degrees, onSubmit, currentDegree }) => {
                                                         </select>
       </div>
       <div>
-        <label>Degrees Of Interest</label>
+        <label>Degrees Of Interest<sup>*</sup></label>
         <div className={styles.checkbox}>
             {degrees.map((degree) => {
               return (
