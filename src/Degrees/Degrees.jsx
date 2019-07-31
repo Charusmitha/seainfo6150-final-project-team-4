@@ -9,8 +9,8 @@ const Degrees = ({ degrees }) => {
       {degrees.map((degree, index) => {
         return (
           <div key={`${degree.slug}`}>
-            <img src={degree.image} alt={degree.title} />
-            <a href={"/degree/" + `${degree.slug}`}>{degree.title}</a>
+            <img className={styles.degreeImage} src={degree.image} alt={degree.title} />
+            <a className={styles.degrees} href={"/degree/" + `${degree.slug}`}>{degree.title}</a>
           </div>
         );
       })}

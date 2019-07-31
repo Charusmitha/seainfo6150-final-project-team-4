@@ -4,11 +4,16 @@ import styles from './Calendar.module.css';
 
 const Calendar = ({ dates }) => {
   return (
-    <div>
+    <div className={styles.calendar}>
       {dates.map((date, index) => {
         return (
           <div key={`${date.date}-${index}`}>
-            <p>{date.date} --> {date.description}</p>
+            <table className={styles.calendarOfEvents}>
+              <tr>
+                <td className={styles.date}>{date.date}</td>
+                <td className={styles.description}>{date.description}</td>
+              </tr>
+            </table>
           </div>
         );
       })}

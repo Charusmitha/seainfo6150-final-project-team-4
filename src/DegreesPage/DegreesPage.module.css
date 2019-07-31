@@ -1,5 +1,5 @@
 .degrees{
-	margin-top: 135px;
+	margin-top: 155px;
 	margin-bottom: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -8,4 +8,6 @@
 
 .title{
 	text-align: center;
+	color: #a6071c;
+	font-family: sans-serif;	
 }

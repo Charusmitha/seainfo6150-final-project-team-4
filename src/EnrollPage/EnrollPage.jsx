@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
-import styles from './EnrollPage.module.css';
 
 import EnrollConfirmation from "../EnrollConfirmation/EnrollConfirmation";
 import EnrollForm from "../EnrollForm/EnrollForm";
@@ -28,7 +27,7 @@ class EnrollPage extends Component {
         {this.state.form ? (
           <EnrollConfirmation form={this.state.form} />
         ) : (
-          <EnrollForm onSubmit={this.onSubmit} />
+          <EnrollForm degrees={this.props.degrees} onSubmit={this.onSubmit} currentDegree={this.props.degree.title}/>
         )}
       </div>
     );

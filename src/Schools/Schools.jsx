@@ -15,10 +15,10 @@ const Schools = ({ degrees, schools }) => {
         return (
           <div className={styles.schools} key={`${school.slug}`}>
             <h3 className={styles.schoolTitle}>{school.name}</h3>
-            <p>{school.short_summary}</p>
-            <h4>Degrees Offered:</h4>
+            <p className={styles.summary}>{school.short_summary}</p>
+            <h4 className={styles.degreesOffered}>Degrees Offered:</h4>
             {thisSchoolsDegrees.map(degree => (
-              <div className={styles.degreeList}>
+              <div className={styles.degreeList} key={`${degree.slug}`}>
                 <a href={"/degree/" + `${degree.slug}`}>{degree.title}</a>
                 <br />
               </div>
@@ -39,8 +39,3 @@ Schools.propTypes = {
 export default Schools;
 
 
-// thisSchoolsDegrees is an array of all the
-// degrees offered by the school currently being
-// iterated over
-//<a href="http://localhost:3000/degree/${degree.slug}" key={degree.slug}>{degree.title}</a>
-//<div className={styles.degree} key={degree.slug}>{degree.title}</div>

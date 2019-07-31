@@ -1,3 +1,41 @@
 .confirmation{
 	margin-top: 135px;
+	margin-bottom: 30px;
+	margin-left: 270px;
 }
+
+.thankYou{
+	margin-left: 300px;
+	font-family: sans-serif;
+	color: #a6071c;
+}
+
+.data {
+  font-family: sans-serif;
+  border-collapse: collapse;
+}
+
+.data td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.data tr:hover {
+	background-color: #ddd;
+}
+
+.label{
+	width: 150px;
+	font-family: sans-serif;
+	color: #a6071c;
+	font-weight: bold;
+}
+
+.description{
+	width: 600px;
+	font-family: sans-serif;
+	list-style: none;
+}
+
+
+

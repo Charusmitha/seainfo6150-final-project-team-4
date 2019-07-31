@@ -5,16 +5,16 @@ import styles from './DegreesSorterFilterer.module.css';
 const DegreesSorterFilterer = ({ onSort, onFilter, schools }) => {
   return (
     <div className={styles.sortAndFilter}>
-      <section className={styles.sort}>
-        <select onChange={onSort}>
+      <section>
+        <select name="sorter" className={styles.sorter} onChange={onSort}>
           <option value="none">Sort By: None</option>
           <option value="AZ">Sort By: A - Z</option>
           <option value="ZA">Sort By: Z - A</option>
         </select>
       </section>
       <section className={styles.filter}>
-        <div className={styles.levelFilter}>
-          <select name="level" id="level" onChange={onFilter}>
+        <div>
+          <select name="level" id="level" className={styles.level} onChange={onFilter}>
             <option value="none">Filter By Level</option>
             <option value="beginner">Level: Beginner</option>
             <option value="intermediate">Level: Intermediate</option>
@@ -22,8 +22,8 @@ const DegreesSorterFilterer = ({ onSort, onFilter, schools }) => {
             <option value="mastery">Level: Mastery</option>
           </select>
         </div>
-        <div className={styles.schoolFilter}>
-          <select name="school" id="school" onChange={onFilter}>
+        <div>
+          <select name="school" id="school" className={styles.school} onChange={onFilter}>
             <option value="none">Filter By School</option>
 
             {schools.map((school, index) => (

@@ -13,6 +13,8 @@ class DegreesPage extends Component {
     };
   }
 
+
+
   onFilter = e => {
     let filterType;
     if (e.target.id) {

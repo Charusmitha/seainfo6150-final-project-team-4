@@ -5,10 +5,12 @@ import NewsletterForm from '../NewsletterForm/NewsletterForm.jsx';
 const ContactPage = () => {
   return (
     <div className={styles.contactAndDirections}>
-      <p>Directions:</p>
-      <p>Contact:</p>
+      <h2 className={styles.title}>Campus Map</h2>
+      <p className={styles.address}>109 12th Ave, Seattle, WA 98122 &nbsp;&nbsp;| &nbsp;&nbsp; +1.206.747.723</p>
+      <img className={styles.image} src="images/campusMap.png" alt="Campus" />
       <br />
-      Sign up For Newsletter
+      <br />
+      <section className={styles.newsletter}>Please sign up for Newsletter</section>
       <NewsletterForm />
     </div>
   )

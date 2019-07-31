@@ -1,4 +1,29 @@
 .contactAndDirections{
-	margin-top: 135px;
+	margin-top: 155px;
 	margin-bottom: 10px;
+}
+
+.title{
+	color: #a6071c;
+	font-family: sans-serif;
+	margin-left: 20px;
+}
+
+.image{
+	width: 800px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.address{
+	margin-left: 20px;
+	font-family: sans-serif;
+}
+
+.newsletter{
+	margin-left: 20px;
+	font-family: sans-serif;
+	font-size: 20px;
+	color: #a6071c;
+	font-weight: bold;
 }

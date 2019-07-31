@@ -1,11 +1,39 @@
 .navigation{
 	list-style: none;
 	display: flex;
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 .navigation li{
 	padding-right: 15px;
 	font-size: 18px;
+	color: red;
+}
+
+.homeLink, .aboutLink, .schoolsLink, .degreesLink, .calendarLink, .contactLink{
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 20px;
+	color: #5b1091;
+	font-family: Helvetica, sans-serif;
+}
+
+@media (max-width: 800px) {
+  .homeLink, .aboutLink, .schoolsLink, .degreesLink, .calendarLink, .contactLink{
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 10px;
+	color: #5b1091;
+	font-family: Helvetica, sans-serif;
+}
+
+.navigation{
+	list-style: none;
+	display: flex;
+	padding-top: 0px;
+}
+}
+
+.homeLink:hover, .aboutLink:hover, .schoolsLink:hover, .degreesLink:hover, .calendarLink:hover, .contactLink:hover {
 	color: red;
 }

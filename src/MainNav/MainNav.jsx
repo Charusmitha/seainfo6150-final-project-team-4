@@ -7,22 +7,22 @@ const MainNav = () => {
     <nav>
       <ul className={styles.navigation}>
         <li>
-          <Link to="/">Home</Link>
+          <Link className={styles.homeLink} to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link className={styles.aboutLink} to="/about">About</Link>
         </li>
         <li>
-          <Link to="/schools">Schools</Link>
+          <Link className={styles.schoolsLink} to="/schools">Schools</Link>
         </li>
         <li>
-          <Link to="/degrees">Degrees</Link>
+          <Link className={styles.degreesLink} to="/degrees">Degrees</Link>
         </li>
         <li>
-          <Link to="/calendar">Calendar</Link>
+          <Link className={styles.calendarLink} to="/calendar">Calendar</Link>
         </li> 
         <li>
-          <Link to="/contact">Directions and Contact</Link>
+          <Link className={styles.contactLink} to="/contact">Contact and More</Link>
         </li>
       </ul>
     </nav>

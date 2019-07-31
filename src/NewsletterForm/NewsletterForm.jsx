@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import styles from './NewsletterForm.module.css';
 
 class NewsletterForm extends Component {
   constructor(props) {
@@ -16,11 +17,12 @@ class NewsletterForm extends Component {
 
   render() {
     return this.state.submitted ? (
-      <div>Thank you!</div>
+      <div className={styles.thankYou}>Thank you!</div>
     ) : (
-      <form onSubmit={this.onSubmit}>
-        Email: <input type="email" name="email-address" required/>
-        <input type="submit" value="Sign up" />
+      <form className={styles.form} onSubmit={this.onSubmit}>
+        <label>Email ID</label>
+        <input type="email" pattern=".+@+.+com" id="emailId" name="Email ID" required/>
+        <input type="submit" value="Sign Up" />
       </form>
     )
   }

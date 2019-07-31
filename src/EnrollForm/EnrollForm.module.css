@@ -1,7 +1,65 @@
 .enrollForm{
 	margin-top: 135px;
+	margin-bottom: 20px;
+  margin-left: 250px;
 }
 
 .title{
-	text-align: center;
+	margin-left: 350px;
+	font-family: sans-serif;
+	color: #a6071c;
 }
+
+input[type=text], input[type=email], input[type=date], select{  
+  padding: 15px;
+  margin-left: 50px;
+  margin-right: 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  width: 600px;
+}
+
+.enrollForm label{
+	font-size: 18px;
+	display: inline-block;
+  	width: 180px;
+  	text-align: left;
+  	font-family: sans-serif;
+  	color: #a6071c;
+  	font-weight: bold;
+}
+
+input[type=submit]{
+	font-size: 20px;
+	color: #5b1091;
+	border-radius: 20px;
+	background-color: #ddf5d7;
+	border-color: #5b1091;
+  margin-left: 250px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.checkbox{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 15px;
+  margin-left: 230px;
+  margin-right: 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: -15px;
+  margin-bottom: 16px;
+  resize: vertical;
+  width: 600px;
+  grid-gap: 20px;
+  font-family: sans-serif;
+}
+
+
+

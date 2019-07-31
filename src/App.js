@@ -68,6 +68,7 @@ function App() {
                       degree => degree.slug === match.params.slug
                     )[0]
                   }
+                  degrees={degrees}
                 />
               )}
             />

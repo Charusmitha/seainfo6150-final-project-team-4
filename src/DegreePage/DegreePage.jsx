@@ -8,28 +8,41 @@ const DegreePage = ({ degree, schools }) => {
     degree.schools.includes(school.slug)
   );
 
+  const syllabusList =
+    degree.syllabus_pdf_urls &&
+    degree.syllabus_pdf_urls.map(url => (
+      <li key={url}>
+        <a className={styles.syllabusLink} href={url} target="_blank" rel="noopener noreferrer">{url}</a>
+      </li>
+    ))
+
   return (
     <div className={styles.degree}>
-      <img className={styles.image} src={degree.image} alt={degree.title} />
-      <div className={styles.content}>
-        <h2 className={styles.degreeTitle}>{degree.title}</h2>
+      <div className={styles.content}> 
+        <h2 className={styles.degreeTitle}> Degree Program - {degree.title}</h2>
         <p>{degree.short_summary}</p>
-        <h4>List of Schools:</h4>
+        <h4 className={styles.listTitle}>List of Schools</h4>
         {thisDegreesSchools.map(school => (
         <div className={styles.schoolList}>
           {school.name}
-          <br />
         </div>
         ))}
         {degree.syllabus_pdf_urls != null ? (
         <div>
-          <h5>Syllabus:</h5>
-          <p>{degree.syllabus_pdf_urls}</p>
+          <h4>Syllabus</h4>
+          <ul className={styles.list}>{syllabusList}</ul>
+          <br />
           <EnrollLink className={styles.enrolLink} degreeSlug = {degree.slug} />
         </div>  
         ) : (
-          <EnrollLink className={styles.enrolLink} degreeSlug = {degree.slug} />
+        <div>
+          <br />
+          <EnrollLink degreeSlug = {degree.slug} />
+        </div>
         )}
+      </div>
+      <div className={styles.imageContainer}>
+        <img className={styles.image} src={degree.image} alt={degree.title} />
       </div>
     </div>
   );
@@ -40,6 +53,3 @@ DegreePage.propTypes = {
 };
 
 export default DegreePage;
-
-// thisDegreesSchools is an array of all the
-// schools offering the degree currently being viewed

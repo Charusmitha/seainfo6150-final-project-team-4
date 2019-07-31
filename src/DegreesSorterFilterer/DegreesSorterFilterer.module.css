@@ -5,14 +5,25 @@
 	margin-right: 10px;
 }
 
-.sort{
-	margin-right: 10px;
-}
-
 .filter{
 	display: flex;
 }
 
-.levelFilter{
-	margin-right: 10px;
+.level, .sorter{
+	width: 200px;
+	margin-right: -5px;
+	background-color: #ddf5d7;
 }
+
+.school{
+	width: 200px;
+	margin-right: -5px;
+	background-color: #ddf5d7;
+}
+
+@media (max-width: 800px) {
+  .school, .level, .sorter{
+  	width: 100px;
+  }
+}
+

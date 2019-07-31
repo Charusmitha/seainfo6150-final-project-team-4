@@ -7,16 +7,53 @@
   	padding-bottom: 20px;
 }
 
+@media (max-width: 800px) {
+  .schoolList{
+  	grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .degreeList{
 	padding-right: 10px;
+	display: list-item;          
+    list-style-type: circle;       
+    list-style-position: inside;
 }
 
 .schools{
-	border: 2px solid red;
-	height: 400px;
+	border: 2px solid #166103;
+	height: 550px;
 	padding-left: 10px;
 	padding-right: 10px;
+	border-radius: 30px;
+	background-color: #ddf5d7;
+	box-shadow: 0 10px 20px -10px black;
 }
 
 .schoolTitle{
+	color: #a6071c;
+	font-family: sans-serif;
+}
+
+.summary{
+	font-size: 18px;
+	font-family: sans-serif;
+}
+
+.degreeList a{
+	font-size: 18px;
+	text-decoration: none;
+	color: #5b1091;
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+.degreeList a:hover{
+	color: red;
+}
+
+
+.degreesOffered{
+	font-family: sans-serif;
+	color: #a6071c;
 }

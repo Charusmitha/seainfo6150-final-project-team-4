@@ -6,10 +6,10 @@ const WebsiteHeader = () => {
   return (
     <div className = {styles.header}>
     	<div className = {styles.title}>
-      		<p>Seattle <br /> Technological <br /> University</p>
-      	</div>
-      	<div className = {styles.navigation}>
-          <MainNav />
+      	Seattle <br /> Technological <br /> University
+      </div>
+      <div className = {styles.navigation}>
+        <MainNav />
 	  	</div>
     </div>
   )
