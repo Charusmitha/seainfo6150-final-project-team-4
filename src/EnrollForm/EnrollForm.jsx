@@ -29,11 +29,11 @@ const EnrollForm = ({ degrees, onSubmit, currentDegree }) => {
       </div>
       <div>
         <label for="zipcode">Zipcode</label>
-        <input type="text" id="zipcode" name="Zipcode" pattern="[0-9]{5}" placeholder="Please provide 5 digit zipcode" required/>
+        <input type="text" id="zipcode" name="Zipcode" pattern="[0-9]{5}" placeholder="Please provide 5 digit zipcode in the format XXXXX" required/>
       </div>
       <div>
         <label for="phone">Phone Number</label>
-        <input type="text" id="phone" name="Phone Number" oninvalid="this.setCustomValidity('Not Valid')" pattern="[0-9]{10}" placeholder="Please provide 10 digit phone number" required/>
+        <input type="text" id="phone" name="Phone Number" oninvalid="this.setCustomValidity('Not Valid')" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Please provide 10 digit phone number in the format XXX-XXX-XXXX" required/>
       </div>
       <div>
         <label for="dob">DOB</label>
