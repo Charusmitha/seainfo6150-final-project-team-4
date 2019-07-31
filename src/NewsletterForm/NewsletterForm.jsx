@@ -21,7 +21,7 @@ class NewsletterForm extends Component {
     ) : (
       <form className={styles.form} onSubmit={this.onSubmit}>
         <label>Email ID</label>
-        <input type="email" pattern=".+@+.+com" id="emailId" name="Email ID" required/>
+        <input type="email" pattern=".+@+.+com" id="emailId" name="Email ID" placeholder="Please provide your email in the format foo@abc.com"required/>
         <input type="submit" value="Sign Up" />
       </form>
     )
